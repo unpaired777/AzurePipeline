@@ -43,7 +43,14 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "bcb5daea-0d50-473e-b48f-5ba9c19aca49",
+        "testCaseType": "TestCase",
+        "fileName": "Sequence.xaml"
+      }
+    ],
     "modernBehavior": true
   },
   "expressionLanguage": "VisualBasic",

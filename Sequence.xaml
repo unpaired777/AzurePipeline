@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1062,1555" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="440,289" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
       <x:String>System.Activities</x:String>
@@ -34,6 +34,7 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -72,99 +73,22 @@
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="640,1490" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="450,224" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Jazeera Airways - Google Chrome" sap:VirtualizedContainerService.HintSize="578,1368" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="920a69db-b8be-4218-8cf3-78ac7f31c722" Version="V2">
-      <uix:NApplicationCard.Body>
-        <ActivityAction x:TypeArguments="x:Object">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="544,1068" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="var1" />
-              <Variable x:TypeArguments="x:String" Name="var2" />
-              <Variable x:TypeArguments="x:String" Name="var3" />
-              <Variable x:TypeArguments="x:String" Name="var4" />
-              <Variable x:TypeArguments="x:String" Name="total" />
-            </Sequence.Variables>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="482,71" sap2010:WorkflowViewState.IdRef="Assign_1">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[var1]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String">168.300</InArgument>
-              </Assign.Value>
-            </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="482,71" sap2010:WorkflowViewState.IdRef="Assign_2">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[var2]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String">50.000</InArgument>
-              </Assign.Value>
-            </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="482,71" sap2010:WorkflowViewState.IdRef="Assign_3">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[var3]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String">4.000</InArgument>
-              </Assign.Value>
-            </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="482,71" sap2010:WorkflowViewState.IdRef="Assign_5">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[total]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[var1 + var2 + var3]</InArgument>
-              </Assign.Value>
-            </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="482,71" sap2010:WorkflowViewState.IdRef="Assign_4">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[var4]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String">222</InArgument>
-              </Assign.Value>
-            </Assign>
-            <If Condition="[var1 &lt; var4 and var4 =total]" sap:VirtualizedContainerService.HintSize="482,389" sap2010:WorkflowViewState.IdRef="If_1">
-              <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,113" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </Sequence>
-              </If.Then>
-              <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,113" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </Sequence>
-              </If.Else>
-            </If>
-          </Sequence>
-        </ActivityAction>
-      </uix:NApplicationCard.Body>
-      <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 1382, 736" FilePath="C:\Program Files\Google\Chrome\Application\chrome.exe" IconBase64="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" InformativeScreenshot="f1f89a4b30b01c9adc965b8b551a046c.png" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Jazeera Airways - Google Chrome' /&gt;" />
-      </uix:NApplicationCard.TargetApp>
-    </uix:NApplicationCard>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Main.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Main.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
   </Sequence>
 </Activity>
